@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<title>Tag Cloud Example</title> 
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="modal" tabindex="-1" role="dialog" id='myModal'>
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h5 class="modal-title">Tag: Anime</h5>
+     			</div>
+      			<div class="modal-body">
+        			<p class='in-videos mod'>In Videos: 100</p>
+        			<p class='likes mod'>Likes: 100</p>
+        			<p class='dislikes mod'>Dislikes: 100</p>
+        			<p class='positiveness mod'>Positiveness: 0</p>
+        			<p class='categories mod'>Categories: 0</p>
+      			</div>
+      			<div class="modal-footer">
+      				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+<div id="info">
+	<div class="header">Controls:</div>
+	<div>Arrows: Movement</div>
+	<div>Mouse Wheel: Movement</div>
+	<div>Mouse Click: Detail</div>
+	<div>F: Reset Filtration</div>
+	<div>H: Toggle Help</div>
+	<div>Bottom Window to Traverse</div>
+	<div>Upper Window to Change Visual Mapping</div>
+	<div class="header">Visual Mapping:</div>
+	<div>Color: Tag Category</div>
+	<div>Size: Videos</div>
+	<div>Depth: Amount of Categories</div>
+	<div class="header">Colours of Tag Categories:</div>
+	<div id='categories'>
+		<div>
+			<span class='colour' style="background: #66ff33"></span>
+			<span class="text" id='1'>Film and Animation</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #3333ff"></span>
+			<span class="text" id='2'>Cars and Vehicles</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #990099"></span>
+			<span class="text" id='10'>Music</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #ccffcc"></span>
+			<span class="text" id='15'>Pets and Animals</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #ffff00"></span>
+			<span class="text" id='17'>Sports</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #666699"></span>
+			<span class="text" id='18'>Short Movies</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #ff99ff"></span>
+			<span class="text" id='19'>Travel and Events</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #003399"></span>
+			<span class="text" id='20'>Gaming</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #66ffff"></span>
+			<span class="text" id='21'>Videoblogging</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #ff00ff"></span>
+			<span class="text" id='22'>People and Blogs</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #ffff1a"></span>
+			<span class="text" id='23'>Comedy</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #ffffff"></span>
+			<span class="text" id='24'>Entertainment</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #ffcc99"></span>
+			<span class="text" id='25'>News and Politics</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #669999"></span>
+			<span class="text" id='26'>Howto and Style</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #333399"></span>
+			<span class="text" id='27'>Education</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #ccff66"></span>
+			<span class="text" id='28'>Science and Technology</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #ffffcc"></span>
+			<span class="text" id='29'>Nonprofits and Activism</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #009933"></span>
+			<span class="text" id='30'>Movies</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #9966ff"></span>
+			<span class="text" id='31'>Anime or Animation</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #ff0000"></span>
+			<span class="text" id='32'>Action or Adventure</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #cccc00"></span>
+			<span class="text" id='33'>Classics</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #ff6f00"></span>
+			<span class="text" id='34'>Comedy</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #AEEA00"></span>
+			<span class="text" id='35'>Documentary</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #F4511E"></span>
+			<span class="text" id='36'>Drama</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #2962FF"></span>
+			<span class="text" id='37'>Family</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #795548"></span>
+			<span class="text" id='38'>Foreign</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #FFC107"></span>
+			<span class="text" id='39'>Horror</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #2979FF"></span>
+			<span class="text" id='40'>Sci-Fi or Fantasy</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #D4E157"></span>
+			<span class="text" id='41'>Thriller</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #607D8B"></span>
+			<span class="text" id='42'>Shorts</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #CFD8DC"></span>
+			<span class="text" id='43'>Shows</span>
+		</div>
+		<div>
+			<span class='colour' style="background: #FFF176"></span>
+			<span class="text" id='44'>Trailers</span>
+		</div>
+	</div>
+</div>
+<div class='custom-footer'>
+</div>
+<script type="text/javascript" src="js/three.min.js"></script>
+<script type="text/javascript" src="js/OrbitControls.js"></script>
+<script type="text/javascript" src='js/dat.gui.min.js'></script>
+<script type="text/javascript" src="js/main15.js"></script>
+</body>
+</html>
